@@ -1,0 +1,4 @@
+Run `dotnet ef migrations add InitialCreate` from this project directory
+(after `dotnet restore`) to generate the first migration here — see
+backend/README.md section 4. Migration files are environment/tooling-version
+specific, so none are pre-generated in this delivery.

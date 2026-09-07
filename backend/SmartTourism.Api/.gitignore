@@ -1,0 +1,25 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+## Logs
+logs/
+*.log
+
+## Environment / secrets
+.env
+.env.*
+!.env.example
+appsettings.Production.json
+appsettings.*.local.json
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Rider/VSCode
+.idea/
+.vscode/

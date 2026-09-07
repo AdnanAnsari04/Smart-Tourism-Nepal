@@ -1,0 +1,160 @@
+.destinations-page {
+  font-family: var(--sans);
+  background: var(--color-cream-50);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.dest-hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 60px 48px 40px;
+}
+.dest-hero h1 {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.dest-hero p {
+  font-size: 14.5px;
+  color: var(--color-sky-200);
+  margin: 0 0 28px;
+}
+
+.dest-filters {
+  display: flex;
+  gap: 12px;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 14px;
+  flex-wrap: wrap;
+}
+.dest-filters input,
+.dest-filters select {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-ink-900);
+  outline: none;
+  background: var(--color-white);
+}
+.dest-filters input {
+  flex: 1;
+  min-width: 200px;
+}
+.dest-filters input:focus,
+.dest-filters select:focus {
+  border-color: var(--color-sky-500);
+}
+
+.dest-results-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 48px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dest-results-count {
+  font-size: 14px;
+  color: var(--color-slate-600);
+}
+
+.dest-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 48px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 900px) {
+  .dest-grid { grid-template-columns: 1fr; }
+}
+
+.dest-card {
+  background: var(--color-white);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+.dest-photo {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+.photo-trekking { background: linear-gradient(135deg, var(--color-sky-500), var(--color-primary)); }
+.photo-nature { background: linear-gradient(135deg, var(--category-nature-start), var(--category-nature-end)); }
+.photo-heritage { background: linear-gradient(135deg, var(--category-heritage-start), var(--category-heritage-end)); }
+.photo-pilgrimage { background: linear-gradient(135deg, var(--category-pilgrimage-start), var(--category-pilgrimage-end)); }
+.photo-city { background: linear-gradient(135deg, var(--color-highlight), var(--color-accent)); }
+.photo-adventure { background: linear-gradient(135deg, var(--category-adventure-start), var(--category-adventure-end)); }
+
+.dest-body {
+  padding: 18px 20px;
+}
+.dest-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+.dest-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-ink-900);
+  margin: 0;
+}
+.dest-rating {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--status-pending-text);
+  white-space: nowrap;
+}
+.dest-meta {
+  font-size: 12.5px;
+  color: var(--color-slate-600);
+  margin: 0 0 10px;
+}
+.dest-desc {
+  font-size: 13.5px;
+  color: var(--color-slate-500);
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+.dest-tag-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dest-category-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tag-info-text);
+  background: var(--tag-info-bg);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.dest-view-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.dest-view-link:hover {
+  text-decoration: underline;
+}
+
+.dest-empty {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 48px;
+  text-align: center;
+  color: var(--color-slate-600);
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="220" viewBox="0 0 640 220">
+  <!-- Nepali-inspired motif tile: distant mountains, a pagoda-roof temple silhouette, and a string of prayer flags. Tiles horizontally. -->
+
+  <!-- Mountain range -->
+  <path d="M0 160 L40 110 L70 140 L110 80 L150 130 L190 70 L230 140 L270 100 L310 150 L350 90 L390 140 L430 100 L470 150 L510 95 L550 140 L590 110 L640 150 L640 220 L0 220 Z" fill="#123b57" opacity="0.5"/>
+
+  <!-- Pagoda temple silhouette (three-tier roof) -->
+  <g transform="translate(280, 60)">
+    <rect x="18" y="60" width="8" height="30" fill="#123b57" opacity="0.55"/>
+    <path d="M0 60 L30 60 L26 46 L4 46 Z" fill="#123b57" opacity="0.55"/>
+    <path d="M4 46 L26 46 L23 34 L7 34 Z" fill="#123b57" opacity="0.55"/>
+    <path d="M7 34 L23 34 L20 20 L10 20 Z" fill="#123b57" opacity="0.55"/>
+    <rect x="13" y="10" width="2" height="12" fill="#123b57" opacity="0.55"/>
+    <circle cx="14" cy="8" r="2.5" fill="#ff6b45" opacity="0.6"/>
+  </g>
+
+  <!-- Prayer flag string -->
+  <path d="M0 30 Q160 65 320 30 T640 30" fill="none" stroke="#123b57" stroke-width="1.4" opacity="0.35"/>
+  <g opacity="0.5">
+    <rect x="40" y="30" width="14" height="20" fill="#2aa8e0"/>
+    <rect x="90" y="34" width="14" height="20" fill="#ffffff"/>
+    <rect x="140" y="37" width="14" height="20" fill="#ff6b45"/>
+    <rect x="190" y="38" width="14" height="20" fill="#ffb84d"/>
+    <rect x="240" y="35" width="14" height="20" fill="#2aa8e0"/>
+    <rect x="290" y="31" width="14" height="20" fill="#ffffff"/>
+    <rect x="340" y="30" width="14" height="20" fill="#ff6b45"/>
+    <rect x="390" y="33" width="14" height="20" fill="#ffb84d"/>
+    <rect x="440" y="37" width="14" height="20" fill="#2aa8e0"/>
+    <rect x="490" y="38" width="14" height="20" fill="#ffffff"/>
+    <rect x="540" y="35" width="14" height="20" fill="#ff6b45"/>
+    <rect x="590" y="31" width="14" height="20" fill="#ffb84d"/>
+  </g>
+</svg>

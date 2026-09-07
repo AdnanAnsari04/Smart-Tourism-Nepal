@@ -1,0 +1,136 @@
+.budget-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) {
+  .budget-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.budget-input-card,
+.budget-breakdown-card,
+.budget-alt-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.budget-input-card h2,
+.budget-breakdown-card h2,
+.budget-alt-card h2 {
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 0 0 16px;
+}
+
+.budget-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+.budget-input-row span {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.budget-input-row input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  width: 100%;
+}
+
+.budget-input-card input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-accent);
+  margin-bottom: 18px;
+}
+
+.budget-save-btn {
+  width: 100%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.budget-save-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.budget-saved-note {
+  color: var(--status-success-text);
+  font-size: 12.5px;
+  margin: 10px 0 0;
+}
+
+.budget-line {
+  margin-bottom: 16px;
+}
+.budget-line:last-child {
+  margin-bottom: 0;
+}
+.budget-line-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  margin-bottom: 6px;
+}
+.budget-line-top span {
+  color: var(--text);
+}
+.budget-line-top strong {
+  color: var(--text-h);
+}
+.budget-bar-track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-subtle);
+  overflow: hidden;
+}
+.budget-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--color-sky-500), var(--color-accent));
+}
+
+.budget-alt-card p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.budget-alt-card strong {
+  color: var(--status-success-text);
+}
+
+.dash-section-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 28px;
+  position: relative;
+  z-index: 1;
+}
+.dash-section-links a {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+.dash-section-links a:hover {
+  text-decoration: underline;
+}

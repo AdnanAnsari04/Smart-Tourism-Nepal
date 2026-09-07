@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ============================================================
+   Yatra design tokens — primitive → semantic
+   Single source of truth. Every page/component CSS file should
+   reference these variables instead of hardcoding hex values.
+   ============================================================ */
+:root {
+  /* Primitive brand colors (Nepal sky-to-sunset palette) */
+  --color-navy-900: #0e2f45;
+  --color-navy-800: #123b57;
+  --color-navy-700: #1a4d70;
+  --color-sky-500: #2aa8e0;
+  --color-sky-200: #cfe4f0;
+  --color-sunset-500: #ff6b45;
+  --color-sunset-600: #e85530;
+  --color-amber-400: #ffb84d;
+  --color-ink-900: #16232e;
+  --color-slate-600: #5b6b78;
+  --color-slate-500: #3d4a55;
+  --color-slate-400: #9fb8c8;
+  --color-border-light: #d8e6ed;
+  --color-error-500: #e0473a;
+  --color-white: #ffffff;
+  --color-cream-50: #f4f8fb;
+
+  /* Semantic tokens — use these in component/page CSS */
+  --color-primary: var(--color-navy-800);
+  --color-primary-dark: var(--color-navy-900);
+  --color-accent: var(--color-sunset-500);
+  --color-accent-hover: var(--color-sunset-600);
+  --color-highlight: var(--color-amber-400);
+  --color-info: var(--color-sky-500);
+
+  --text: var(--color-slate-600);
+  --text-h: var(--color-ink-900);
+  --text-muted: var(--color-slate-500);
+  --text-on-dark: var(--color-sky-200);
+  --bg: var(--color-white);
+  --bg-subtle: var(--color-cream-50);
+  --border: var(--color-border-light);
+  --error: var(--color-error-500);
+
+  /* Status/semantic tokens — extend here for new statuses */
+  --status-success-bg: #e6f6ec;
+  --status-success-text: #1e8a4c;
+  --status-pending-bg: #fff3e0;
+  --status-pending-text: #c9781a;
+  --status-easy-bg: #1e4a35;
+  --status-easy-text: #8fe0b0;
+  --status-moderate-bg: #4a3a1e;
+  --status-moderate-text: #ffcf8a;
+  --status-hard-bg: #4a1e1e;
+  --status-hard-text: #ff9d9d;
+
+  /* Neutral UI tokens for card borders, tags, muted text */
+  --tag-info-bg: #eaf6fc;
+  --tag-info-text: #1c86b4;
+  --border-subtle: #e5edf2;
+  --border-faint: #eef3f6;
+  --text-faint: #8b98a3;
+  --card-border-light: #eaf1f5;
+  --rating-text: #c9781a;
+
+  /* Destination-category accent gradients (used by both home + destinations cards) */
+  --category-heritage-start: #ff8f66;
+  --category-heritage-end: #a83e2a;
+  --category-nature-start: #7ac97a;
+  --category-nature-end: #2e6b3a;
+  --category-pilgrimage-start: #c98fe0;
+  --category-pilgrimage-end: #5a3a8c;
+  --category-adventure-start: #6ac9e0;
+  --category-adventure-end: #1a5a70;
+
+  --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.3);
+
+  --sans: "Poppins", system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: "Poppins", system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font: 16px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode intentionally not enabled yet — the token system above
+   is ready to extend with a `--color-scheme: dark` block once dark
+   mode is actually designed for the real UI (not just leftover
+   Vite-template elements). */
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+/* Consistent keyboard-focus ring across all interactive elements —
+   only shown for keyboard navigation, not mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-sky-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Subtle, tileable Nepali motif (mountains/pagoda/prayer-flags) used as a
+   fixed low-opacity backdrop behind page content — see CulturalBackdrop.tsx.
+   "light" variant sits behind cream/white sections, "dark" behind navy ones. */
+.cultural-backdrop {
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 640px 220px;
+  pointer-events: none;
+  z-index: -1;
+}
+.cultural-backdrop-light {
+  opacity: 0.05;
+}
+.cultural-backdrop-dark {
+  opacity: 0.12;
+  filter: invert(1) brightness(1.4);
+}
+
+p {
+  margin: 0;
+}
+
+/* Screen-reader-only text: keeps an accessible label without
+   showing visible text where the design calls for a placeholder-only look. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect users who've asked for reduced motion, site-wide (not just
+   on the auth page, which previously had the only such rule). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

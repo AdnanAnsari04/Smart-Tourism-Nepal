@@ -1,0 +1,121 @@
+.settings-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.settings-card h2 {
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 0 0 8px;
+}
+.settings-card-desc {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  max-width: 640px;
+}
+
+.settings-lang-btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text-h);
+  cursor: pointer;
+}
+.settings-lang-btn:hover {
+  background: var(--color-sky-200);
+}
+
+.settings-table {
+  border: 1px solid var(--border-faint);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.settings-table-header,
+.settings-table-row {
+  display: grid;
+  grid-template-columns: 1fr 70px 70px 70px;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+.settings-table-header {
+  background: var(--bg-subtle);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-faint);
+}
+.settings-table-header span:not(:first-child),
+.settings-table-row > *:not(:first-child) {
+  text-align: center;
+}
+.settings-table-row {
+  border-top: 1px solid var(--border-faint);
+}
+.settings-row-label {
+  color: var(--text-h);
+  font-weight: 600;
+  font-size: 13.5px;
+  margin: 0 0 2px;
+}
+.settings-row-desc {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 0;
+}
+.settings-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+.settings-row-locked {
+  background: var(--bg-subtle);
+}
+.settings-locked-cell {
+  color: var(--text-faint);
+  font-size: 13px;
+}
+.settings-locked-on {
+  color: var(--status-success-text);
+  font-weight: 700;
+}
+
+.settings-save-btn {
+  margin-top: 18px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 11px 22px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.settings-save-btn:hover {
+  background: var(--color-accent-hover);
+}
+.settings-saved-note {
+  color: var(--status-success-text);
+  font-size: 12.5px;
+  margin: 10px 0 0;
+}
+
+@media (max-width: 560px) {
+  .settings-table-header,
+  .settings-table-row {
+    grid-template-columns: 1fr 50px 50px 50px;
+    padding: 12px 10px;
+  }
+}

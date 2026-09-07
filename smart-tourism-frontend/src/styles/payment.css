@@ -1,0 +1,198 @@
+.payment-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.payment-card h2 {
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 0 0 16px;
+}
+
+.payment-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-faint);
+}
+.payment-line:last-of-type {
+  border-bottom: none;
+}
+.payment-line-title {
+  color: var(--text-h);
+  font-weight: 600;
+  font-size: 13.5px;
+  margin: 0 0 3px;
+}
+.payment-line-detail {
+  color: var(--text-muted);
+  font-size: 12.5px;
+  margin: 0;
+}
+.payment-line-total {
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 6px;
+  padding-top: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.payment-method-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 8px;
+  cursor: pointer;
+}
+.payment-method-card.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+.pm-sub {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+.pm-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--color-white);
+}
+.pm-badge-esewa { background: #60bb46; }
+.pm-badge-khalti { background: #5c2d91; }
+.pm-badge-imepay { background: #ef4136; }
+.pm-badge-connectips { background: #0056a3; }
+.pm-badge-card { background: var(--color-slate-500); }
+
+.payment-detail-row {
+  background: var(--bg-subtle);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+.payment-detail-row label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 6px;
+}
+.payment-detail-row input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-family: var(--sans);
+  outline: none;
+}
+.payment-detail-hint {
+  color: var(--text-faint);
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.payment-card-fields > div {
+  margin-bottom: 12px;
+}
+.payment-card-fields-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .payment-methods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 460px) {
+  .payment-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.payment-confirm-btn {
+  width: 100%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+.payment-confirm-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.payment-security-note {
+  color: var(--text-faint);
+  font-size: 12px;
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+.payment-success-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+.payment-success-icon {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 auto 18px;
+}
+.payment-success-card h2 {
+  color: var(--text-h);
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+.payment-success-card p {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.payment-back-link {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+.payment-back-link:hover {
+  text-decoration: underline;
+}

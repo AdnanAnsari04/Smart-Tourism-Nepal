@@ -1,0 +1,365 @@
+.heritage-page {
+  font-family: var(--sans);
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heritage-hero {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(135deg, var(--category-heritage-start), var(--category-heritage-end));
+  color: var(--color-white);
+  padding: 90px 48px 70px;
+  overflow: hidden;
+}
+.heritage-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+.heritage-eyebrow {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-white);
+  opacity: 0.9;
+  margin: 0 0 14px;
+}
+.heritage-hero h1 {
+  font-family: var(--heading);
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+.heritage-hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.heritage-section {
+  position: relative;
+  z-index: 1;
+  padding: 70px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.heritage-section-cream {
+  background: var(--color-cream-50);
+  max-width: none;
+  padding-left: calc(50vw - 550px);
+  padding-right: calc(50vw - 550px);
+}
+.heritage-section-eyebrow {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.heritage-section-title {
+  font-family: var(--heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0 0 36px;
+  max-width: 560px;
+}
+
+/* ---- UNESCO cards ---- */
+.unesco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.unesco-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.unesco-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.unesco-card-top h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+}
+.unesco-year {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tag-info-text);
+  background: var(--tag-info-bg);
+  border-radius: 6px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+.unesco-card p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---- Heritage site cards ---- */
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.heritage-card {
+  display: block;
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s;
+}
+.heritage-card:hover {
+  transform: translateY(-2px);
+}
+.heritage-card-photo {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+.heritage-card-body {
+  padding: 18px 20px;
+}
+.heritage-card-province {
+  color: var(--tag-info-text);
+  background: var(--tag-info-bg);
+  display: inline-block;
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 11.5px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.heritage-card-body h3 {
+  color: var(--text-h);
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.heritage-card-body p {
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+.heritage-card-link {
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---- Festival cards ---- */
+.festival-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.festival-card {
+  background: var(--bg-subtle);
+  border-radius: 12px;
+  padding: 20px;
+}
+.festival-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.festival-card-top h3 {
+  color: var(--text-h);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.festival-season {
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+.festival-card p {
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---- CTA band ---- */
+.heritage-cta {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+  color: var(--color-ink-900);
+  text-align: center;
+  padding: 70px 24px;
+}
+.heritage-cta h2 {
+  font-family: var(--heading);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.heritage-cta p {
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+.heritage-cta-button {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: 13px 28px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.heritage-cta-button:hover {
+  background: var(--color-primary-dark);
+}
+
+@media (max-width: 900px) {
+  .heritage-hero,
+  .heritage-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .heritage-section-cream {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .unesco-grid,
+  .heritage-grid,
+  .festival-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .heritage-hero h1 {
+    font-size: 30px;
+  }
+  .heritage-hero {
+    padding: 64px 20px 50px;
+  }
+}
+
+/* ---- Full heritage directory ---- */
+.heritage-directory-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.heritage-directory-tools input,
+.heritage-directory-tools select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-family: var(--sans);
+}
+.heritage-directory-tools input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.heritage-directory-count {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.heritage-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .heritage-directory-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heritage-dir-card {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 18px 20px;
+  border-top: 3px solid var(--color-accent);
+}
+.heritage-dir-coral { border-top-color: var(--color-accent); }
+.heritage-dir-gold { border-top-color: var(--color-highlight); }
+.heritage-dir-blue { border-top-color: var(--color-sky-500); }
+.heritage-dir-green { border-top-color: var(--category-nature-start); }
+
+.heritage-dir-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+.heritage-dir-card h3 {
+  color: var(--text-h);
+  font-size: 15.5px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.heritage-dir-card p {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+.heritage-dir-visit {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-style: italic;
+  border-top: 1px solid var(--border-faint);
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.heritage-directory-empty {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+}
+.heritage-directory-empty h3 {
+  color: var(--text-h);
+  margin: 0 0 6px;
+}
+
+.heritage-directory-principle {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-faint);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+.heritage-directory-principle strong {
+  color: var(--text-h);
+}

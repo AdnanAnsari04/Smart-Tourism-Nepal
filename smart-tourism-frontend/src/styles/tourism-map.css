@@ -1,0 +1,121 @@
+.map-page {
+  font-family: var(--sans);
+  background: var(--color-cream-50);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.map-hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 60px 48px 40px;
+}
+.map-hero h1 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+.map-hero p {
+  color: var(--color-sky-200);
+  margin: 0 0 24px;
+  font-size: 14.5px;
+  max-width: 640px;
+}
+
+.map-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.map-filter-pill {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-sky-200);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.map-filter-pill.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.map-container-wrap {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding: 0 48px;
+}
+.map-leaflet {
+  height: 560px;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  z-index: 1; /* keep leaflet's own internal stacking above our page backdrop */
+}
+
+.map-attribution-note {
+  max-width: 1100px;
+  margin: 16px auto 60px;
+  padding: 0 48px;
+  color: var(--text-faint);
+  font-size: 12.5px;
+}
+.map-attribution-note a {
+  color: var(--color-accent);
+}
+
+/* Leaflet popup content */
+.map-popup {
+  font-family: var(--sans);
+  min-width: 160px;
+}
+.map-popup-category {
+  color: var(--tag-info-text);
+  background: var(--tag-info-bg);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.map-popup-name {
+  color: var(--color-ink-900);
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.map-popup-province {
+  color: var(--color-slate-600);
+  font-size: 12.5px;
+  margin: 0 0 8px;
+}
+.map-popup-link {
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.map-popup-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .map-hero {
+    padding: 40px 20px 28px;
+  }
+  .map-container-wrap,
+  .map-attribution-note {
+    padding: 0 20px;
+  }
+  .map-leaflet {
+    height: 420px;
+  }
+}

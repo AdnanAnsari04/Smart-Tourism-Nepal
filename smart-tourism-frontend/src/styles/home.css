@@ -1,0 +1,312 @@
+.home-page {
+  font-family: var(--sans);
+  position: relative;
+}
+
+/* Signature thread: sky blue fading to sunset orange down the page */
+.prayer-thread {
+  position: absolute;
+  top: 0;
+  left: 48px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-sky-500) 0%, var(--color-highlight) 55%, var(--color-accent) 100%);
+  opacity: 0.3;
+  z-index: 0;
+}
+@media (max-width: 900px) {
+  .prayer-thread { display: none; }
+}
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 100px 48px 140px;
+  overflow: hidden;
+}
+.hero-mountains {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.hero-mountains::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(18, 59, 87, 0.92) 0%,
+    rgba(18, 59, 87, 0.75) 45%,
+    rgba(18, 59, 87, 0.35) 100%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+.hero-eyebrow {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: var(--sans);
+  color:white;
+  font-size: 50px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+.hero-subtitle {
+  font-size: 17px;
+  color: var(--color-sky-200);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.hero-search {
+  display: flex;
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 6px;
+  max-width: 480px;
+}
+.hero-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 12px 16px;
+  font-size: 15px;
+  outline: none;
+  color: var(--color-ink-900);
+  font-family: var(--sans);
+}
+.hero-search button {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+.hero-search button:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ---- Section shell ---- */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 48px;
+}
+.section-cream {
+  background: var(--color-white);
+}
+.section-dark {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+.section-eyebrow {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.section-dark .section-eyebrow {
+  color: var(--color-highlight);
+}
+.section-title {
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 40px;
+  max-width: 820px;
+}
+
+/* ---- Destination cards ---- */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .destination-grid { grid-template-columns: 1fr; }
+}
+.destination-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--card-border-light);
+}
+.destination-photo {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+.destination-photo.everest { background: linear-gradient(135deg, var(--color-sky-500), var(--color-primary)); }
+.destination-photo.pokhara { background: linear-gradient(135deg, var(--color-highlight), var(--color-accent)); }
+.destination-photo.kathmandu { background: linear-gradient(135deg, var(--category-heritage-start), var(--category-heritage-end)); }
+.destination-body {
+  padding: 20px;
+}
+.destination-body h3 {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.destination-body p {
+  font-size: 13.5px;
+  color: var(--color-slate-600);
+  margin: 0 0 10px;
+}
+.destination-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tag-info-text);
+  background: var(--tag-info-bg);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ---- Trek list ---- */
+.trek-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(216, 7, 7, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+
+}
+.section-dark {
+  color: #ffffff;
+}
+
+.section-dark .section-title {
+  color: #ffffff;
+}
+
+.section-dark .trek-name {
+  color: #ffffff;
+}
+.trek-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primary-dark);
+  padding: 22px 26px;
+}
+.trek-name {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+.trek-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--color-slate-400);
+}
+.difficulty-pill {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.difficulty-easy { background: var(--status-easy-bg); color: var(--status-easy-text); }
+.difficulty-moderate { background: var(--status-moderate-bg); color: var(--status-moderate-text); }
+.difficulty-hard { background: var(--status-hard-bg); color: var(--status-hard-text); }
+
+/* ---- Heritage pills ---- */
+.heritage-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.heritage-pill {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--color-ink-900);
+}
+
+/* ---- CTA band ---- */
+.cta-band {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+  color: var(--color-ink-900);
+  text-align: center;
+  padding: 70px 24px;
+}
+.cta-band h2 {
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+.cta-button {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cta-button:hover {
+  background: var(--color-primary-dark);
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 64px 20px 90px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 15.5px;
+  }
+  .hero-search {
+    flex-direction: column;
+    gap: 8px;
+    max-width: 100%;
+  }
+  .hero-search button {
+    width: 100%;
+  }
+  .section {
+    padding: 56px 20px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+.home-heritage-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.home-heritage-link:hover {
+  text-decoration: underline;
+}

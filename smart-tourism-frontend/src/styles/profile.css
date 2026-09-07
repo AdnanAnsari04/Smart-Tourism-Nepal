@@ -1,0 +1,101 @@
+.profile-form {
+  max-width: 760px;
+}
+.profile-section {
+  background: var(--color-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.profile-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 700px) {
+  .profile-field-row {
+    grid-template-columns: 1fr;
+  }
+}
+.profile-field {
+  margin-bottom: 16px;
+}
+.profile-field-row .profile-field {
+  margin-bottom: 0;
+}
+.profile-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-900);
+  margin-bottom: 6px;
+}
+.profile-field input,
+.profile-field select {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--sans);
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  background: var(--color-white);
+  color: var(--color-ink-900);
+  font-size: 14px;
+  outline: none;
+}
+.profile-field input:focus,
+.profile-field select:focus {
+  border-color: var(--color-sky-500);
+}
+.profile-field input:disabled {
+  background: var(--bg-subtle);
+  color: var(--text-faint);
+  cursor: not-allowed;
+}
+.profile-hint {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin: 4px 0 0;
+}
+
+.profile-interest-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.profile-interest-chip {
+  background: var(--bg-subtle);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-slate-600);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.profile-interest-chip.is-selected {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.profile-save-btn {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.profile-save-btn:hover {
+  background: var(--color-accent-hover);
+}
+.profile-saved-note {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--status-success-text);
+}

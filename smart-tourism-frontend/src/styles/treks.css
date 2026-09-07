@@ -1,0 +1,181 @@
+.treks-page {
+  font-family: var(--sans);
+  background: var(--color-cream-50);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.treks-hero {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 60px 48px 40px;
+}
+.treks-hero h1 {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.treks-hero p {
+  font-size: 14.5px;
+  color: var(--color-sky-200);
+  margin: 0 0 24px;
+}
+
+.treks-filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.treks-filter-pill {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-sky-200);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.treks-filter-pill.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.treks-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 48px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 700px) {
+  .treks-list { padding: 32px 24px 60px; }
+}
+
+.trek-card {
+  display: flex;
+  background: var(--color-white);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 600px) {
+  .trek-card { flex-direction: column; }
+}
+.trek-card-photo {
+  width: 180px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 600px) {
+  .trek-card-photo { width: 100%; height: 120px; }
+}
+.trek-card-body {
+  padding: 20px 24px;
+  flex: 1;
+}
+.trek-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.trek-card-top h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink-900);
+  margin: 0 0 2px;
+}
+.trek-card-region {
+  font-size: 12.5px;
+  color: var(--color-slate-600);
+  margin: 0;
+}
+.trek-card-desc {
+  font-size: 13.5px;
+  color: var(--color-slate-500);
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+.trek-card-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--color-slate-600);
+  margin-bottom: 12px;
+}
+
+.trek-details-toggle {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 4px;
+}
+.trek-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: var(--bg-subtle);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 10px 0 16px;
+}
+@media (max-width: 500px) {
+  .trek-details { grid-template-columns: 1fr; }
+}
+.trek-details-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-ink-900);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0 0 6px;
+}
+.trek-details ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--color-slate-600);
+  line-height: 1.6;
+}
+
+.trek-reserve-btn {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.trek-reserve-btn:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+.trek-reserve-btn:disabled {
+  background: var(--status-success-text);
+  cursor: default;
+}
+
+.difficulty-pill {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.difficulty-easy { background: var(--status-easy-bg); color: var(--status-easy-text); }
+.difficulty-moderate { background: var(--status-moderate-bg); color: var(--status-moderate-text); }
+.difficulty-hard { background: var(--status-hard-bg); color: var(--status-hard-text); }
